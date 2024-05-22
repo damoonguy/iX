@@ -1,0 +1,36 @@
+#bod {
+    background-color: black;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50vh;
+    
+}
+
+p {
+    margin: auto;
+}
+
+div > div > div {
+    background-color: white;
+    height: 100%;
+    border: 10px solid black;
+}
+#b1 {
+    background-color: blue;
+}
+#b2 {
+    background-color: yellow;
+}
+#b3 {
+    background-color: green;
+}
+#b4 {
+    background-color: red;
+}
+#b5 {
+    width: 66.5vw;
+    background-color: magenta;
+}
