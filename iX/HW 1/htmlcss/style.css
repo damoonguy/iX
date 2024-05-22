@@ -1,0 +1,50 @@
+body {
+    background-color: black;
+}
+
+p {
+    margin: auto;
+}
+
+div {
+    background-color: gray;
+}
+
+div > div {
+    display: flex;
+    flex-grow: 1;
+}
+
+div > div > div {
+    align-items: center;
+    float: left;
+    height: 46vh;
+    width: 32.5vw;
+    margin: 1vh;
+}
+
+#box1 {
+    align-content: center;
+    background-color: blue;
+}
+
+#box2 {
+    text-align: center;
+    background-color: yellow;
+}
+
+#box3 {
+    text-align: center;
+    background-color: green;
+}
+
+#box4 {
+    text-align: center;
+    background-color: red;
+}
+
+#box5 {
+    text-align: center;
+    width: 67vw;
+    background-color: magenta;
+}
