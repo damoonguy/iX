@@ -2,7 +2,9 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import HomePage from "./components/HomePage";
+import HomePage from "./components/pages/Home";
+import CategoriesPage from "./components/pages/Categories";
+import BlogsPage from "./components/pages/Blogs";
 
 function App() {
   return (

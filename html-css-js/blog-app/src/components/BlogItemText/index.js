@@ -1,5 +1,7 @@
 import Categories from "../Categories";
 import "./index.css";
+import PropTypes from "prop-types";
+
 
 export default function BlogItemText({ blogPost, headerFontSize }) {
   return (
@@ -28,4 +30,9 @@ export default function BlogItemText({ blogPost, headerFontSize }) {
       <Categories blogPost={blogPost} />
     </div>
   );
+}
+
+BlogItemText.propTypes = {
+  blogPost: PropTypes.array.isRequired,
+  headerFontSize: PropTypes.number
 }
