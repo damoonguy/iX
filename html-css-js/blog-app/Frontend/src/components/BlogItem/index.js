@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import BlogItemText from "../BlogItemText";
 
@@ -14,14 +15,17 @@ export default function BlogItem({
 }) {
 if (imageOrientation === "top") {
     return (
+      
       <div key={index} className="card-1">
-        <img src={blogPost.image} className="card-img-top" alt="..." />
-        <div className="card-text-bottom">
-          <BlogItemText
-            blogPost={blogPost}
-            headerFontSize="20px"
-          ></BlogItemText>
-        </div>
+          <img src={blogPost.image} className="card-img-top" alt="..." />
+          
+          <div className="card-text-bottom">
+            <BlogItemText
+              blogPost={blogPost}
+              headerFontSize="20px"
+            ></BlogItemText>
+          </div>
+        
       </div>
     );
   } else {
@@ -34,6 +38,7 @@ if (imageOrientation === "top") {
             headerFontSize="20px"
           ></BlogItemText>
         </div>
+      
       </div>
     );
   }

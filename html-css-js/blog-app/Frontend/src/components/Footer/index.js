@@ -1,21 +1,23 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <div class="container" >
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3" >
                     <li class="nav-item" >
-                        <a href="../pages/Home/index.js" class="nav-link px-2 text-body-secondary">Home</a>
+                        <Link to="/home/" class="nav-link px-2 text-body-secondary">Home</Link>
                     </li>
                     <li class="nav-item" >
-                        <a href="../../pages/Categories/index.js" class="nav-link px-2 text-body-secondary">Categories</a>
+                        <Link to="/categories" class="nav-link px-2 text-body-secondary">Categories</Link>
                     </li>
                     <li class="nav-item" >
-                        <a href="../pages/Blogs/index.js" class="nav-link px-2 text-body-secondary">Blogs</a>
+                        <Link to="/blogs" class="nav-link px-2 text-body-secondary">Blogs</Link>
                     </li>
                     <li class="nav-item" >
-                        <a href="" class="nav-link px-2 text-body-secondary">About</a>
+                        <Link to="/about" class="nav-link px-2 text-body-secondary">About</Link>
                     </li>
                 </ul>
                 <p class="text-center text-body-secondary">My BLOG App</p>

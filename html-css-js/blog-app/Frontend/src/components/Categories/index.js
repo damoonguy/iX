@@ -24,5 +24,5 @@ export default function Categories({ blogPost }) {
 }
 
 Categories.propTypes = { 
-  blogPost: PropTypes.array.isRequired
+  blogPost: PropTypes.object.isRequired
 }
