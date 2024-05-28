@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 import "./index.css";
 
-import { Link } from "react-router-dom";
 import BlogItem from "../BlogItem";
 
 const data = require("../../dummy-data.json");

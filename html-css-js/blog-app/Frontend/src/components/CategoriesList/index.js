@@ -9,6 +9,13 @@ import "./index.css";
 export default function CategoriesList({ categories }) {
   const nav = useNavigate();
 
+  
+  if (!categories || !categories.length) {
+    return null;
+  }
+
+  
+
   return (
     <div className="category-list">
       {categories.map((category, index) => {

@@ -1,25 +1,55 @@
-import React from "react";
-import BlogItem from "../../components/BlogItem";
-import BlogItemText from "../../components/BlogItemText";
+import React, {useState, useEffect} from "react";
+import Navbar from "../../components/Navbar";
+import SubHeading from "../../components/SubHeading";
 
 
 import { useParams } from "react-router-dom";
 
-const data = require("../../dummy-data.json");
-let blog = data.blogPosts;
+import blogService from "../../services/blogService";
+
 
 
 export default function BlogPage() {
-    const { blogId } = useParams();
+    let { blogId } = useParams();
+    
+    const [blog, setBlog] = useState();
+
+    useEffect(() => {
+        const fetchBlog = async () => {
+            try {
+              const blogsRes = await blogService.getBlogById(blogId);
+              setBlog(blogsRes);
+            } catch (err) {
+              throw new Error(err);
+            }
+          }
+          fetchBlog();
+    }, []);
+    
+      
+    console.log(blog);
 
 
-    console.log(blogId);
+   
 
+
+    function BlogAuthor() {
+        if (blog.author != undefined) {
+            return <h2>Written by: { blog.author.firstName+" "+blog.author.lastName }</h2>;
+        } 
+    }
+    
+        
     
 
     return (
         <div> 
+            <Navbar/>
+            <SubHeading subHeading={blog.title} style="font-size: 144px;"/> 
             <h1>This is blog { blogId }</h1>
+            <BlogAuthor/>
+            
+            
         </div>
     );
 }

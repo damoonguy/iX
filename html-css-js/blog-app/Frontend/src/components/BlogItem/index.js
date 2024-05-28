@@ -16,7 +16,7 @@ export default function BlogItem({
 if (imageOrientation === "top") {
     return (
       
-      <div key={index} className="card-1">
+      <Link key={index} className="card-1" aria-current="page" to={"/blog/" + blogPost.id}>
           <img src={blogPost.image} className="card-img-top" alt="..." />
           
           <div className="card-text-bottom">
@@ -26,11 +26,11 @@ if (imageOrientation === "top") {
             ></BlogItemText>
           </div>
         
-      </div>
+      </Link>
     );
   } else {
     return (
-      <div key={index} className="card-2">
+      <Link key={index} className="card-2" to={"/blog/" + blogPost.id}>
         <img src={blogPost.image} className="card-img-left" alt="..." />
         <div className="card-text-right">
           <BlogItemText
@@ -39,7 +39,7 @@ if (imageOrientation === "top") {
           ></BlogItemText>
         </div>
       
-      </div>
+      </Link>
     );
   }
 }
